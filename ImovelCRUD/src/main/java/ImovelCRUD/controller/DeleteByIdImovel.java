@@ -19,10 +19,10 @@ public class DeleteByIdImovel {
     public ResponseEntity<Object> ListarID(@PathVariable Long id) {
         Optional<ImovelModel> imovelID = this.imovelRepository.findById(id);
         if (imovelID.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Lista vazia");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID não encontrado");
         }
         var imovelDel=imovelID.get();
         this.imovelRepository.delete(imovelDel);
-        return ResponseEntity.status(HttpStatus.OK).body("Imovel deletado");
+        return ResponseEntity.status(HttpStatus.OK).body("Imóvel deletado");
     }
 }

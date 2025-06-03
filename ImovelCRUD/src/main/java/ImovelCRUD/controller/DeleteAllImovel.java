@@ -19,6 +19,6 @@ public class DeleteAllImovel {
     public ResponseEntity<Object> deletarTodos()
     {
         this.imovelRepository.deleteAll();
-        return ResponseEntity.status(HttpStatus.OK).body("Todos os imoveis foram deletados");
+        return ResponseEntity.status(HttpStatus.OK).body("Todos os imóveis foram deletados");
     }
 }

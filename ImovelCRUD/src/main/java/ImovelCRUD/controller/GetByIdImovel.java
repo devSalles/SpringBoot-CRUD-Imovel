@@ -25,7 +25,7 @@ public class GetByIdImovel {
         Optional<ImovelModel>imovelID=this.imovelRepository.findById(id);
         if(imovelID.isEmpty())
         {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Lista vazia");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("ID não encontrado");
         }
         var imovel=imovelID.get();
         return ResponseEntity.status(HttpStatus.OK).body(imovel);

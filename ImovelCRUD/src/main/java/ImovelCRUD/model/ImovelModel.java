@@ -6,10 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Locale;
-
 @Entity
-@Table(name = "tb__imovel")
+@Table(name = "imovel")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -46,9 +44,9 @@ public class ImovelModel {
     @Column(nullable = false,name = "tipo_imovel",length = 55)
     private String tipo;
 
-    @Column(nullable = false,precision = 13,scale = 4)
+    @Column(nullable = false)
     private Double valor;
 
     @Column(nullable = false,length = 25)
-    private String diponibilidade;
+    private String disponibilidade;
 }

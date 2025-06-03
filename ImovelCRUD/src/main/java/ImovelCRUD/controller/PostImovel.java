@@ -23,6 +23,6 @@ public class PostImovel {
         var imovel=new ImovelModel();
         BeanUtils.copyProperties(imovelDTO,imovel);
         this.imovelRepository.save(imovel);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Imovel adicionado");
+        return ResponseEntity.status(HttpStatus.CREATED).body("Imóvel adicionado");
     }
 }
